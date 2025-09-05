@@ -34,6 +34,7 @@ public class PlayerShipController : MonoBehaviour
 
         if (Input.GetButton("Fire1") && canShoot)
         {
+            SoundManager.Instance.PlaySound2D("PlayerFire");
             StartCoroutine(FireSpeed());
             Rigidbody _bullet;
             _bullet = Instantiate(playerBullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation) as Rigidbody;
