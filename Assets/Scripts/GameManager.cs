@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnShip()
     {
-        Vector3 spawnPosition = new Vector3(Random.Range(-2.5f, 2.5f), 12, 0);
+        Vector3 spawnPosition = new Vector3(Random.Range(-3.73f, 3.73f), 15, 0);
         Instantiate(enemyShip, spawnPosition, Quaternion.identity);
     }
 }
