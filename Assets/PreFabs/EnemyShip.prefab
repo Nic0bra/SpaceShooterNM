@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7190830956742129210}
   - component: {fileID: 4136263954864614625}
   - component: {fileID: 6538936530471865258}
+  - component: {fileID: 6240099865398608639}
+  - component: {fileID: 4713616884539752601}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Enemy
@@ -68,6 +70,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 2
+  shipMoveSpeed: -3
+  _frequency: 6
+  _distance: 0.75
+  rotateSpeed: 0
+--- !u!114 &6240099865398608639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630880281873553890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f6f78c03d58e048947b274f55f0471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTime: 10
+--- !u!114 &4713616884539752601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630880281873553890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3047f6de1132b1e4db0ac3f691d62589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 2714033027100694826, guid: 415c99510c6a84849be11547f22e2221, type: 3}
+  firePoint: {fileID: 7999673716994160414}
+  bulletSpeed: 10
+  initialShot: 0
+  repeatShotRate: 0
+--- !u!1 &6525372934792252488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7999673716994160414}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7999673716994160414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6525372934792252488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -1.0220004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5004298538173884897}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4825728483128839690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,7 +189,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2f2f48df56424924585358ea624f4d9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7999673716994160414}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2f48df56424924585358ea624f4d9b, type: 3}
 --- !u!4 &5004298538173884897 stripped

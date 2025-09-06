@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    //[SerializeField] public float spawnTime = 2f;
+    [SerializeField] public float spawnTime = 2f;
     [SerializeField] public GameObject enemyShip;
-    public float ySpawnPos = 15;
+    //public float ySpawnPos = 25f;
 
     //public bool isGamePlaying;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
 
     void SpawnShip()
     {
-        Vector3 spawnPosition = new Vector3(Random.Range(-3.73f, 3.73f), ySpawnPos, 0);
+        float randomX = Random.Range(-5f, 5f);
+        Vector3 spawnPosition = new Vector3(randomX, 15f, 0);
         Instantiate(enemyShip, spawnPosition, Quaternion.identity);
     }
 }
